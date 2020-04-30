@@ -1,2 +1,2 @@
 # jatsii
-yahtzee
+yahtzee game for educational purposes with html and javascript.
