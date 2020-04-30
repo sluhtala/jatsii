@@ -2,9 +2,22 @@
 
 <html>
 	<head>
-
+		<title>Jatsii</title>
+		<style src="jatsii_style.css"></style>
+		<script src="jatsii_script.js"></script>
 	</head>
 	<body>
-		<h1>Hello jatsii</h1>
+		<h1>Jatsiipeli</h1>
+		<div class="actions">
+			<button type="button" onclick="roll_dice()">Heit&#228; noppia</button>
+			<button type="button" onclick="reset_all()">Nollaa nopat</button>
+		</dive>
+		<div class="dices">
+				<button type="button" id="dice_1" onclick="lock_dice('1','dice_1')">1</td>
+				<button type="button" id="dice_2" onclick="lock_dice('2','dice_2')">1</td>
+				<button type="button" id="dice_3" onclick="lock_dice('3','dice_3')">1</td>
+				<button type="button" id="dice_4" onclick="lock_dice('4','dice_4')">1</td>
+				<button type="button" id="dice_5" onclick="lock_dice('5','dice_5')">1</td>
+		</div>
 	</body>
 </html>
