@@ -1,0 +1,65 @@
+html
+{
+    background-color: rgb(64, 175, 255);
+}
+
+body
+{
+	font-size:140%;
+}
+
+h1
+{
+    font-family: Verdana;
+    text-align: center ;
+}
+
+button
+{
+    text-align: center ;
+    width: 50px;
+    height: 50px;
+    border-radius: 30%;
+    background-color: white;
+    color: black;
+    font-size: 120%;
+    border-style: none ;
+    margin-right: 5px;
+    margin-left: 5px;
+}
+
+
+.dices {
+  margin: auto;
+  width: 300px;
+  padding: 4px; 
+}
+
+#action
+{
+    border-style: solid ;
+    border-color: black ;
+    border-width: 6px;
+    border-radius: 0px;
+    background-color: blue ;
+    color: white;
+    border-style: outset ;
+    width: 200px;
+    font-size: 80%;
+}
+
+div.actions
+{
+    margin: auto;
+    width: 430px;
+    padding-bottom: 20px
+    
+}
+p
+{
+    text-align: center ;
+}
+h2
+{
+    text-align: center ;
+}

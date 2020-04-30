@@ -2,16 +2,16 @@
 
 <html>
 	<head>
+		<link rel="stylesheet" href="jatsii_style.css">
 		<title>Jatsii</title>
-		<style src="jatsii_style.css"></style>
 		<script src="jatsii_script.js"></script>
 	</head>
 	<body>
 		<h1>Jatsiipeli</h1>
 		<div class="actions">
-			<button type="button" onclick="roll_dice()">Heit&#228; noppia</button>
-			<button type="button" onclick="reset_all()">Nollaa nopat</button>
-		</dive>
+			<button id="action" type="button" onclick="roll_dice()">Heit&#228; noppia</button>
+			<button id="action" type="button" onclick="reset_all()">Nollaa nopat</button>
+		</div>
 		<div class="dices">
 				<button type="button" id="dice_1" onclick="lock_dice('1','dice_1')">1</td>
 				<button type="button" id="dice_2" onclick="lock_dice('2','dice_2')">1</td>
@@ -19,5 +19,9 @@
 				<button type="button" id="dice_4" onclick="lock_dice('4','dice_4')">1</td>
 				<button type="button" id="dice_5" onclick="lock_dice('5','dice_5')">1</td>
 		</div>
+		<div class="roll_amount">
+			<p id="roll_amount">Heittojen m&#228;&#228;r&#228;: 0</p>
+		</div>
+	<h2 id="jatsii_text"></h2>
 	</body>
 </html>
