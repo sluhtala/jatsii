@@ -36,7 +36,6 @@ div.dices {
   background-color: none;
 }
 
-
 #action
 {
     border-style: solid ;
@@ -57,6 +56,7 @@ div.dices {
     padding-bottom: 20px
     
 }
+
 p
 {
     text-align: center ;
@@ -73,10 +73,11 @@ table
 	width:40%;
 	text-align:center;
 }
+
 #new_game
 {
 	font-size:80%;
-	width: 100px;
+	width: 150px;
 	height:40px;
 	border-style:solid;
 	border-radius:0px;
@@ -85,4 +86,3 @@ table
 	border-width:4px;
 	color:white;	
 }
-
