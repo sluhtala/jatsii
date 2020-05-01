@@ -5,6 +5,7 @@
 		<link rel="stylesheet" href="jatsii_style.css">
 		<title>Jatsii</title>
 		<script src="jatsii_script.js"></script>
+		<script src="jatsii_script_2.js"></script>
 	</head>
 	<body>
 		<h1>Jatsiipeli</h1>
@@ -39,26 +40,32 @@
 			<tr>
 				<td>Ykk&#246;set</td>
 				<td><input id="score_1" type="number" ></td>
+				<td><input id="score_1_cb" type="checkbox" onclick="aces()"></td>
 			</tr>
 			<tr>
 				<td>Kakkoset</td>
 				<td><input id="score_2" type="number" ></td>
+				<td><input id="score_2_cb" type="checkbox" onclick="twos()"></td>
 			</tr>
 			<tr>
 				<td>Kolmoset</td>
 				<td><input id="score_3" type="number" ></td>
+				<td><input id="score_3_cb" type="checkbox" onclick="threes()"></td>
 			</tr>
 			<tr>
 				<td>Neloset</td>
 				<td><input id="score_4" type="number" ></td>
+				<td><input id="score_4_cb" type="checkbox" onclick="fours()"></td>
 			</tr>
 			<tr>
 				<td>Viitoset</td>
 				<td><input id="score_5" type="number" ></td>
+				<td><input id="score_5_cb" type="checkbox" onclick="fives()"></td>
 			</tr>
 			<tr>
 				<td>Kuutoset</td>
 				<td><input id="score_6" type="number" ></td>
+				<td><input id="score_6_cb" type="checkbox" onclick="sixes()"></td>
 			</tr>
 			<tr>
 				<td>V&#228;lisumma</td>
@@ -67,38 +74,47 @@
 			<tr>
 				<td>Pari</td>
 				<td><input id="score_7" type="number" ></td>
+				<td><input id="score_7_cb" type="checkbox" onclick="pair()"></td>
 			</tr>
 			<tr>
 				<td>Kaksi paria</td>
 				<td><input id="score_8" type="number" ></td>
+				<td><input id="score_8_cb" type="checkbox" onclick="two_pairs()"></td>
 			</tr>
 			<tr>
 				<td>Kolme samaa</td>
 				<td><input id="score_9" type="number" ></td>
+				<td><input id="score_9_cb" type="checkbox" onclick="three_of_a_kind()"></td>
 			</tr>
 			<tr>
 				<td>Nelj&#228; samaa</td>
 				<td><input id="score_10" type="number" ></td>
+				<td><input id="score_10_cb" type="checkbox" onclick="four_of_a_kind()"></td>
 			</tr>
 			<tr>
 				<td>Pikku suora</td>
 				<td><input id="score_11" type="number" ></td>
+				<td><input id="score_11_cb" type="checkbox" onclick="sm_straight()"></td>
 			</tr>
 			<tr>
 				<td>Iso suora</td>
 				<td><input id="score_12" type="number" ></td>
+				<td><input id="score_12_cb" type="checkbox" onclick="lg_straight()"></td>
 			</tr>
 			<tr>
 				<td>T&#228;ysk&#228;si</td>
 				<td><input id="score_13" type="number" ></td>
+				<td><input id="score_13_cb" type="checkbox" onclick="full_house()"></td>
 			</tr>
 			<tr>
 				<td>Sattuma</td>
 				<td><input id="score_14" type="number" ></td>
+				<td><input id="score_14_cb" type="checkbox" onclick="chance()"></td>
 			</tr>
 			<tr>
 				<td>Jatsii</td>
 				<td><input id="score_15" type="number"></td>
+				<td><input id="score_15_cb" type="checkbox" onclick="yatsii()"></td>
 			</tr>
 			<tr>
 				<td>Summa</td>

@@ -6,6 +6,45 @@ var jatsii = 0;
 var scores = [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0];
 var bonus_score = 0;
 
+function find_biggest_same(amount, except)
+{
+	var i = 6;
+	var j = 0;
+	var num = 0;
+	
+	while (i > 0)
+	{
+		j = 0;
+		num = 0;
+		while (j < 5 && i != except)
+		{
+			if (dices[j] == i)
+				num += 1;	
+			j++;	
+		}
+		if (num >= amount)
+			return i;
+		i -= 1;
+	}
+	return 0;
+}
+
+
+function score_from_dices(mask)
+{
+	var i = 0;
+	var return_score = 0;
+	while (i < 5)
+	{
+		if (mask[dices[i]-1] == 1)
+		{
+			return_score += dices[i];
+		}
+		i++;
+	}
+	return return_score;
+}
+
 function lock_dice(dice_num, id)
 {
 	var dice = parseInt(dice_num);
@@ -48,14 +87,16 @@ function update_scores()
 {
 	var i = 0;
 	var m_sum = 0;
+	var score_id;
 	while (i < 15)
-	{	
-		scores[i] = parseInt(document.getElementById("score_" + (i+1)).value);
+	{
+		score_id = document.getElementById("score_"+ (i+1));
+		scores[i] = parseInt(score_id.value);
 		if (!scores[i])
 		{
 			scores[i] = 0;
 		}
-		if (i < 6 && scores[i])
+		if (i < 6 && score_id.value != "")
 		{
 			m_sum += 1;;
 		}
@@ -131,9 +172,11 @@ function new_game()
 	{
 		scores[i] = 0;
 		document.getElementById("score_" + (i + 1)).value = "";
+		document.getElementById("score_" + (i + 1) + "_cb").checked = false;
 		i++;
 	}
 	document.getElementById("midsum").innerHTML = 0;
+	
 	update_scores();
 }
 
@@ -161,5 +204,3 @@ function randInt(min, max)
 {
 	return Math.floor(Math.random() * (max - min)) + min;
 }
-
-
