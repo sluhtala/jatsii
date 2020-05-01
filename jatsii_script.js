@@ -2,6 +2,10 @@
 var locked_dice = [0, 0, 0, 0, 0];
 var dices = [1, 1, 1, 1, 1];
 var roll_amount = 0;
+var jatsii = 0;
+var scores = [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0];
+var bonus_score = 0;
+
 function lock_dice(dice_num, id)
 {
 	var dice = parseInt(dice_num);
@@ -40,10 +44,61 @@ function roll_dice()
 	check_jatsii();
 }
 
+function update_scores()
+{
+	var i = 0;
+	var m_sum = 0;
+	while (i < 15)
+	{	
+		scores[i] = parseInt(document.getElementById("score_" + (i+1)).value);
+		if (!scores[i])
+		{
+			scores[i] = 0;
+		}
+		if (i < 6 && scores[i])
+		{
+			m_sum += 1;;
+		}
+		i++;
+	}
+	if (m_sum == 6)
+	{
+		m_sum = mid_summ();
+		if (m_sum >= 63)
+		{
+			bonus_score = 50;
+			document.getElementById("midsum").innerHTML = m_sum + " bonus 50!";
+		}
+		else
+		{
+			bonus_score = 0;
+			document.getElementById("midsum").innerHTML = m_sum + " no bonus..";
+		}
+	}
+	var sum = scores.reduce((a,b) => a + b, 0);
+	document.getElementById("sum").innerHTML = (sum + bonus_score);
+}
+
+function mid_summ()
+{
+	var num = 0;
+	var i = 0;
+
+	while (i < 6)
+	{
+		num = num + scores[i];
+		i++;
+	}
+	return num;
+}
+
+
 function check_jatsii()
 {
 	var num = dices[0];
 	var i = 1;
+	if (jatsii == 1)
+		return ;
 	while (i < 5)
 	{
 		if (dices[i] != num)
@@ -52,7 +107,8 @@ function check_jatsii()
 		}
 		i++;
 	}
-	document.getElementById("jatsii_text").innerHTML = "JATSII! " + roll_amount + " heittoa";
+	jatsii = 1;
+	document.getElementById("jatsii_text").innerHTML = "JATSII!";
 }
 
 function update_dices()
@@ -63,6 +119,22 @@ function update_dices()
 	document.getElementById("dice_3").innerHTML = dices[2];
 	document.getElementById("dice_4").innerHTML = dices[3];
 	document.getElementById("dice_5").innerHTML = dices[4];
+}
+
+function new_game()
+{
+	var i = 0;
+	reset_all();
+
+	bonus_score = 0;
+	while(i < 15)
+	{
+		scores[i] = 0;
+		document.getElementById("score_" + (i + 1)).value = "";
+		i++;
+	}
+	document.getElementById("midsum").innerHTML = 0;
+	update_scores();
 }
 
 function reset_all()
@@ -81,6 +153,7 @@ function reset_all()
 	document.getElementById("dice_4").style.opacity = 1;
 	document.getElementById("dice_5").style.opacity = 1;
 	document.getElementById("jatsii_text").innerHTML = "";
+	jatsii = 0;
 	update_dices();
 }
 

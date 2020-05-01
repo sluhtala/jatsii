@@ -9,8 +9,8 @@
 	<body>
 		<h1>Jatsiipeli</h1>
 		<div class="actions">
-			<button id="action" type="button" onclick="roll_dice()">Heit&#228; noppia</button>
-			<button id="action" type="button" onclick="reset_all()">Nollaa nopat</button>
+			<button id="action" type="button" onclick="roll_dice()">heit&#228; noppia</button>
+			<button id="action" type="button" onclick="reset_all()">nollaa nopat</button>
 		</div>
 		<div class="dices">
 				<button type="button" id="dice_1" onclick="lock_dice('1','dice_1')">1</td>
@@ -22,6 +22,89 @@
 		<div class="roll_amount">
 			<p id="roll_amount">Heittojen m&#228;&#228;r&#228;: 0</p>
 		</div>
-	<h2 id="jatsii_text"></h2>
+		<h2 id="jatsii_text"></h2>
+		<table onchange="update_scores()">
+			<tr>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>Ykk&#246;set</td>
+				<td><input id="score_1" type="number" ></td>
+			</tr>
+			<tr>
+				<td>Kakkoset</td>
+				<td><input id="score_2" type="number" ></td>
+			</tr>
+			<tr>
+				<td>Kolmoset</td>
+				<td><input id="score_3" type="number" ></td>
+			</tr>
+			<tr>
+				<td>Neloset</td>
+				<td><input id="score_4" type="number" ></td>
+			</tr>
+			<tr>
+				<td>Viitoset</td>
+				<td><input id="score_5" type="number" ></td>
+			</tr>
+			<tr>
+				<td>Kuutoset</td>
+				<td><input id="score_6" type="number" ></td>
+			</tr>
+			<tr>
+				<td>V&#228;lisumma</td>
+				<td id="midsum">0</td>
+			</tr>
+			<tr>
+				<td>Pari</td>
+				<td><input id="score_7" type="number" ></td>
+			</tr>
+			<tr>
+				<td>Kaksi paria</td>
+				<td><input id="score_8" type="number" ></td>
+			</tr>
+			<tr>
+				<td>Kolme samaa</td>
+				<td><input id="score_9" type="number" ></td>
+			</tr>
+			<tr>
+				<td>Nelj&#228; samaa</td>
+				<td><input id="score_10" type="number" ></td>
+			</tr>
+			<tr>
+				<td>Pikku suora</td>
+				<td><input id="score_11" type="number" ></td>
+			</tr>
+			<tr>
+				<td>Iso suora</td>
+				<td><input id="score_12" type="number" ></td>
+			</tr>
+			<tr>
+				<td>T&#228;ysk&#228;si</td>
+				<td><input id="score_13" type="number" ></td>
+			</tr>
+			<tr>
+				<td>Sattuma</td>
+				<td><input id="score_14" type="number" ></td>
+			</tr>
+			<tr>
+				<td>Jatsii</td>
+				<td><input id="score_15" type="number"></td>
+			</tr>
+			<tr>
+				<td>Summa</td>
+				<td id="sum">0</td>
+			</tr>
+		</table>
+			<button id="new_game" type="button" onclick="new_game()">Uusi peli</button>
 	</body>
 </html>
