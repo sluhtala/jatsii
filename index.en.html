@@ -8,11 +8,11 @@
 		<script src="jatsii_script_2.js"></script>
 	</head>
 	<body>
-		<h1>Jatsiipeli</h1>
-		<a href=index.en.html>en</a>
+		<h1>Jatsiigame</h1>
+		<a href=index.html>fi</a>
 		<div class="actions">
-			<button id="action" type="button" onclick="roll_dice()">heit&#228; noppia</button>
-			<button id="action" type="button" onclick="reset_all()">nollaa nopat</button>
+			<button id="action" type="button" onclick="roll_dice()">roll dice</button>
+			<button id="action" type="button" onclick="reset_all()">reset dice</button>
 		</div>
 		<div class="dices">
 				<button type="button" id="dice_1" onclick="lock_dice('1','dice_1')">1</td>
@@ -22,7 +22,7 @@
 				<button type="button" id="dice_5" onclick="lock_dice('5','dice_5')">1</td>
 		</div>
 		<div class="roll_amount">
-			<p id="roll_amount">Heittojen m&#228;&#228;r&#228;: 0</p>
+			<p id="roll_amount">Number of rolls: 0</p>
 		</div>
 		<h2 id="jatsii_text"></h2>
 		<table onchange="update_scores()">
@@ -39,76 +39,76 @@
 				<td></td>
 			</tr>
 			<tr>
-				<td>Ykk&#246;set</td>
+				<td>Aces</td>
 				<td><input id="score_1" type="number" ></td>
 				<td><input id="score_1_cb" type="checkbox" onclick="aces()"></td>
 			</tr>
 			<tr>
-				<td>Kakkoset</td>
+				<td>Twos</td>
 				<td><input id="score_2" type="number" ></td>
 				<td><input id="score_2_cb" type="checkbox" onclick="twos()"></td>
 			</tr>
 			<tr>
-				<td>Kolmoset</td>
+				<td>Threes</td>
 				<td><input id="score_3" type="number" ></td>
 				<td><input id="score_3_cb" type="checkbox" onclick="threes()"></td>
 			</tr>
 			<tr>
-				<td>Neloset</td>
+				<td>Fours</td>
 				<td><input id="score_4" type="number" ></td>
 				<td><input id="score_4_cb" type="checkbox" onclick="fours()"></td>
 			</tr>
 			<tr>
-				<td>Viitoset</td>
+				<td>Fives</td>
 				<td><input id="score_5" type="number" ></td>
 				<td><input id="score_5_cb" type="checkbox" onclick="fives()"></td>
 			</tr>
 			<tr>
-				<td>Kuutoset</td>
+				<td>Sixes</td>
 				<td><input id="score_6" type="number" ></td>
 				<td><input id="score_6_cb" type="checkbox" onclick="sixes()"></td>
 			</tr>
 			<tr>
-				<td>V&#228;lisumma</td>
+				<td>Middle sum</td>
 				<td id="midsum">0</td>
 			</tr>
 			<tr>
-				<td>Pari</td>
+				<td>Pair</td>
 				<td><input id="score_7" type="number" ></td>
 				<td><input id="score_7_cb" type="checkbox" onclick="pair()"></td>
 			</tr>
 			<tr>
-				<td>Kaksi paria</td>
+				<td>Two pairs</td>
 				<td><input id="score_8" type="number" ></td>
 				<td><input id="score_8_cb" type="checkbox" onclick="two_pairs()"></td>
 			</tr>
 			<tr>
-				<td>Kolme samaa</td>
+				<td>3 of a kind</td>
 				<td><input id="score_9" type="number" ></td>
 				<td><input id="score_9_cb" type="checkbox" onclick="three_of_a_kind()"></td>
 			</tr>
 			<tr>
-				<td>Nelj&#228; samaa</td>
+				<td>4 of a kind</td>
 				<td><input id="score_10" type="number" ></td>
 				<td><input id="score_10_cb" type="checkbox" onclick="four_of_a_kind()"></td>
 			</tr>
 			<tr>
-				<td>Pikku suora</td>
+				<td>Small straight</td>
 				<td><input id="score_11" type="number" ></td>
 				<td><input id="score_11_cb" type="checkbox" onclick="sm_straight()"></td>
 			</tr>
 			<tr>
-				<td>Iso suora</td>
+				<td>Big straight</td>
 				<td><input id="score_12" type="number" ></td>
 				<td><input id="score_12_cb" type="checkbox" onclick="lg_straight()"></td>
 			</tr>
 			<tr>
-				<td>T&#228;ysk&#228;si</td>
+				<td>Full house</td>
 				<td><input id="score_13" type="number" ></td>
 				<td><input id="score_13_cb" type="checkbox" onclick="full_house()"></td>
 			</tr>
 			<tr>
-				<td>Sattuma</td>
+				<td>Chance</td>
 				<td><input id="score_14" type="number" ></td>
 				<td><input id="score_14_cb" type="checkbox" onclick="chance()"></td>
 			</tr>
@@ -118,10 +118,10 @@
 				<td><input id="score_15_cb" type="checkbox" onclick="yatsii()"></td>
 			</tr>
 			<tr>
-				<td>Summa</td>
+				<td>Sum</td>
 				<td id="sum">0</td>
 			</tr>
 		</table>
-			<button id="new_game" type="button" onclick="new_game()">Uusi peli</button>
+			<button id="new_game" type="button" onclick="new_game()">New Game</button>
 	</body>
 </html>
